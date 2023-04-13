@@ -1,0 +1,87 @@
+<meta charset="UTF-8">
+
+<title> HOLA MUNDO</title>
+
+<h1>PROGRAMA</h1>
+
+
+
+<script>
+    function saltarLinea(){
+        document.write("<br>")
+    }
+
+    var anio = 2025;
+    document.write("Variable actual: "+ anio);
+    saltarLinea();
+    document.write("Bubu tiene: " + (anio - 2001) + " años");
+    saltarLinea();
+    document.write("Wong tiene: " + (anio - 2000) + " años");
+    saltarLinea();
+    anio= 2023;
+    document.write ("Esta es la actualizacion de la variable : " + anio);
+    saltarLinea();
+    saltarLinea(); 
+
+    function imprimir(frase){
+        document.write("<big>" + frase + "</big>");
+        saltarLinea();  // podemos usar funciones dentro de otras funciones
+    }
+    
+    imprimir("cualquier cosa");
+    //vamos a usar la funcion imprimir para imprimr lo de arriba en vez de escribir el document write
+    imprimir("Bubu tiene: " + (anio - 2001) + " años");
+
+    //Ejercicio -- diferencia de edades con mi hermano
+
+    var edadMia = 21;
+    var edadHermano = 16;
+
+    saltarLinea();
+    imprimir("Ejercicio.")
+    imprimir ( "La edad de mi hermano es: " + edadHermano + ".")
+    imprimir("La mía es; " + edadMia + ".")
+    imprimir("Por lo tantos nos llevamos " + (edadMia -edadHermano) + " años.")
+    saltarLinea();
+    //Ejercicio calcular IMC
+
+    function calculaImc(peso, altura){
+        imc= peso / (altura*altura);
+        return(imc);
+    }
+    var pesoBubu= 86;
+    var alturaBubu= 1.80;
+    var imcBubu= pesoBubu /(alturaBubu*alturaBubu);
+    imprimir ("El IMC de Bubu es: "+ imcBubu);
+    //Usando la funcion
+    imcBubu= calculaImc(pesoBubu, alturaBubu);
+    imprimir ("El IMC de Bubu es: "+ imcBubu);
+
+
+    //Optimizando el codigo 
+    function imcCorto(peso, altura){
+        imc = peso / (altura*altura); //esto lo podemos omitir y directamente ponerlo en el return 
+        // imprimir("El Imc calculado es: " + imc);
+        return  (peso/ (altura * altura));
+
+
+    }
+
+    imcCorto(86, 1.80);
+    imprimir(imcCorto(87, 1.80));
+
+    var pesoUsuario= prompt("Escriba su peso: ");   //prompt() es para que el usuario interactue con la pagina
+    //donde podemos poner en los () lo que sea que queramos que la pag diga como un alert
+    var alturaUsuario =prompt ("Escriba su estatura ");
+    imprimir("El imc del usuario es: " + imcCorto(pesoUsuario, alturaUsuario));
+
+  
+
+
+
+
+
+</script>
+
+
+
