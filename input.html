@@ -1,0 +1,43 @@
+<meta charset="UTF-8">
+
+<title> INPUTTTT </title>
+
+<h1>PROGRAMA</h1>
+
+
+<input/> 
+<button> Verifica el secreto </button>
+
+<script>
+//Usando input y button
+    var secreto = Math.round(Math.random()*10);
+    var input = document.querySelector("input");
+    input.focus();
+    var secretos =[3,4,5,6];
+
+
+    for (var i=0; i<4; i++){
+        if (secretos == parseInt( input.value)){
+            alert("usted acertó ");
+            
+        }else{
+            alert("usted erró");
+            
+        }
+    }
+
+
+    function verificar (){
+    if(parseInt(input.value) == secreto){              // el .value recoge el valor que está dentro, si el, solo estamos llamando a la etiqueta
+        alert("usted acertó");
+    }else{
+        alert("usted erro");
+
+    }
+    input.value="";
+    input.focus();
+    }
+
+    var button = document.querySelector("button");
+    button.onclick=verificar;
+</script>
