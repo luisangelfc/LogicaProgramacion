@@ -1,0 +1,70 @@
+<meta charset="UTF-8">
+
+<title> INPUTTTT </title>
+
+<h1>PROGRAMA</h1>
+
+
+<input/> 
+<button> Verifica el secreto </button>
+
+<script>
+//Usando input y button
+    var secreto = Math.round(Math.random()*10);
+    var input = document.querySelector("input"); 
+    input.focus();
+    var secretos =[3,4,5,6];
+    var arrayrandom = [];
+    
+    function aleatorio (){
+        return Math.round(Math.random()*10);
+    }
+
+    function sorteoNum (cantidad){
+        var arrayrandom = [];
+        var contador= 1;
+        while (contador<=cantidad){
+            numeroAleatorio =aleatorio();
+            arrayrandom.push(numeroAleatorio);
+            contador++;
+
+        }
+        return arrayrandom;
+    }
+
+    var arrayrandom = sorteoNum(4);
+    console.log(arrayrandom);
+
+    function verificar2 (){
+    var encontrado = false;
+    for (var i=0; i<secretos.length; i++){
+        if (secretos[i] == parseInt( input.value)){
+            alert("usted acertó ");
+            encontrado= true;
+            break;
+            
+        }
+            
+        }
+            if (encontrado==false){      
+            alert("usted erró");
+            }
+    }
+    
+
+
+    function verificar (){
+    if(parseInt(input.value) == secreto){              // el .value recoge el valor que está dentro, si el, solo estamos llamando a la etiqueta
+        alert("usted acertó");
+    }else{
+        alert("usted erro");
+
+    }
+    
+    }
+    input.value="";
+    input.focus();
+
+    var button = document.querySelector("button");
+    button.onclick=verificar2;
+</script>

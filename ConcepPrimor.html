@@ -1,0 +1,116 @@
+<meta charset="UTF-8">
+
+<title> CONCEPTOS PRIMORDIALES</title>
+
+<h1>PROGRAMA</h1>
+
+
+
+
+
+<script>
+    function saltarLinea(){
+        document.write("<br>")
+    }
+
+    function imprimir(frase){
+        document.write("<big>" + frase + "</big>");
+        saltarLinea();  // podemos usar funciones dentro de otras funciones
+    }
+    
+    // Aqui empieza todo el codigo . JUEGO
+    var numeropensado = Math.round(Math.random()*10);
+    var numerolanzado= parseInt(prompt("Ingrese un numero del 0-10:"));
+     
+    if (numeropensado==numerolanzado){
+        imprimir("Usted aceptó")
+
+    } else{
+        imprimir("no, el numero era " + numeropensado);
+    }
+    
+    //usando while
+    var contador= 1;
+     while (contador<=3){
+    if (numeropensado==numerolanzado){
+        imprimir("Usted aceptó en el intento "+contador);
+        break;
+
+    } else{
+        imprimir("fail");
+    }
+    if (numeropensado==numerolanzado){
+        imprimir("acertóen el intento "+ contador);
+    }else{
+        imprimir("perdiste el numero pensado era el " + numeropensado);
+
+    }
+    contador++
+}
+
+
+
+    //CALCULAR AÑO DE LOS MUNDIALES
+    var anioMundial = parseInt(prompt("Ingrese a partirde que año quiera que salga el año: "));
+    var limite = parseInt(prompt("ingrese el limite:"));
+
+    //alert("El primer mundial fue en el año: " + anioMundial);
+
+    while(anioMundial<limite){
+        imprimir("El mundial fue en el año: " + anioMundial);
+        anioMundial= anioMundial + 4
+    }
+    imprimir("fin");
+    saltarLinea();
+    saltarLinea();
+    saltarLinea();
+
+
+    //TABLA DE MULTIPLICAR
+    //WHILE
+    var multiplicador = 1
+    while(multiplicador<=10){
+        imprimir (5 * multiplicador);
+        multiplicador++
+    }
+
+
+    //FOR
+    for (var i= 1; i<=10; i++){
+        imprimir (5 * multiplicador);
+    }
+
+    //PROMEDIO FAMILIAS
+    
+    var numIntegrantes= parseInt(prompt("ingrese el numero de integrantes de la familia"));
+    var contador= 1;
+    var suma = 0;
+
+    while(contador<= numIntegrantes){
+        edad = parseInt(prompt("Ingrese la edad:"));
+        suma = suma + edad;
+        contador++;
+    
+    }
+    imprimir ("La suma de las edades es: " + suma);
+    imprimir ("El promedio de las edades es: " + (suma/numIntegrantes));
+    imprimir ("fin");
+    saltarLinea();
+    saltarLinea();
+    for (var i = 1; i <= 5; i++){
+        for (var columnas = 1; columnas<=10; columnas++){
+            document.write("*");
+        }
+        saltarLinea();
+
+    }
+
+    
+
+
+
+
+
+
+
+</script>
